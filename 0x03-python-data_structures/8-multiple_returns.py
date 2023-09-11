@@ -8,4 +8,4 @@ def multiple_returns(sentence):
     else:
         length = len(sentence)
         first = sentence[0]
-    print("{:d} - First character: {}".format(length, first))
+    return (length, first)
