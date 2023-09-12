@@ -2,6 +2,11 @@
 #include <object.h>
 #include <listobject.h>
 
+/**
+*print_python_list_info -  a C function that prints info about Python lists.
+*@p: object
+**/
+
 void print_python_list_info(PyObject *p)
 {
 	int x;
