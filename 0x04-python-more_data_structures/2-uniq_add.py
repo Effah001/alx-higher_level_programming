@@ -4,8 +4,8 @@ def uniq_add(my_list=[]):
     uniq_set = set()
     
     for i in my_list:
-        if i not in unique_set:
+        if i not in uniq_set:
             result += i
             uniq_set.add(i)
             
-    return result 
+    return result
