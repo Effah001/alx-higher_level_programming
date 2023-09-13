@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
+        if not a_dictionary:
+                return None
         high_score = None
         for key, value in a_dictionary.items():
             if high_score is None or value > high_score:
