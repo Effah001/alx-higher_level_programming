@@ -2,8 +2,8 @@
 def best_score(a_dictionary):
         if not a_dictionary:
                 return None
-        high_score = None
+        high_score = 0
         for key, value in a_dictionary.items():
-            if high_score is None or value > high_score:
+            if value > high_score:
                 high_score = value
         return high_score
