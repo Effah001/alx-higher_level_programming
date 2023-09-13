@@ -4,6 +4,4 @@ def best_score(a_dictionary):
         for key, value in a_dictionary.items():
             if value > high_score:
                 high_score = value
-                return high_score
-        else:
-            return None
+        return high_score
