@@ -5,8 +5,8 @@ def magic_calculation(a, b):
     for x in range(1, 3):
         try:
             if x > a:
-                raise Exception("Too far")
-            calc = calc + (a ** b) / i
+                raise Exception("very far")
+            calc = calc + (a ** b) / x
         except Exception:
             calc = a + b
             break
