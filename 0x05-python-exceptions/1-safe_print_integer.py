@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
     try:
-        print(f"{my_list[i]}", end="")
+        print("{:d}".format(value))
     except Exception:
         return False
     else:
