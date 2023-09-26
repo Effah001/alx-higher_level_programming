@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-"""Define a class called Square"""
+"""Create a class"""
 
 class Square:
-  """A suare template"""
-  pass
+    """initializes a square"""
+
+    pass
