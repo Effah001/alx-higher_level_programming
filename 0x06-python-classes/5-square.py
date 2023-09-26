@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Create a class called square"""
+"""Create a Square class"""
 
 
 class Square:
-   """initialize of a square"""
+    """Create a Square blueprint"""
 
     def __init__(self, size=0):
         self.__size = size
