@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-"""Create a Square class"""
-
+"""Create a class"""
 
 class Square:
-    """Create a Square blueprint"""
+    """initializes a square"""
 
     def __init__(self, size=0):
         self.__size = size
@@ -22,4 +21,4 @@ class Square:
         self.__size = value
 
     def area(self):
-        return self.__size ** 2
+        return (self.__size * self.__size)
