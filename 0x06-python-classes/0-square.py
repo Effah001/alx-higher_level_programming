@@ -2,6 +2,7 @@
 
 """Create a class"""
 
+
 class Square:
     """initializes a square"""
 
