@@ -31,12 +31,12 @@ class Node:
 
 
 class SinglyLinkedList:
-    """Create the singlyLinkedList"""
+    """Creating the singly_Linked_List"""
     def __init__(self):
         self.__head = None
 
     def sorted_insert(self, value):
-        """Insert a new node into a linked list in a sorted manner"""
+        """Insert the new node into linked list in a sorted manner"""
         new_node = Node(value)
         if self.__head is None:
             self.__head = new_node
