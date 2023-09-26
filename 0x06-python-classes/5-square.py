@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
-"""Define a class called Square"""
+"""Create a Square class"""
+
 
 class Square:
-    """initialize of a square"""
+    """Create a Square blueprint"""
+
     def __init__(self, size=0):
         self.__size = size
 
@@ -20,13 +22,15 @@ class Square:
         self.__size = value
 
     def area(self):
-            return (self.__size * self.__size)
+        return self.__size ** 2
 
     def my_print(self):
-        if self.__size == 0:
+        s = self.__size
+
+        if s == 0:
             print()
         else:
-            for x in range(self.__size):
-                for x in range(self.__size):
+            for i in range(s):
+                for i in range(s):
                     print("#", end="")
                 print()
