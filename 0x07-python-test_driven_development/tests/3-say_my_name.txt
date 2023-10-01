@@ -1,0 +1,27 @@
+==========================================
+A doctest to test the say_my_name function
+==========================================
+
+"""
+	>>> name = __import__("3-say_my_name").say_my_name
+
+	>>> name(Francis)
+	My name is Francis
+
+	>>> name("Francis","Effah")
+	My name is Francis EFfah
+
+	>>> name(3)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> name("Francis", 4)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+
+"""
