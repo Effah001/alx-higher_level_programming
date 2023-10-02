@@ -4,5 +4,5 @@ A class named Rectangle which is doing nothing
 """
 
 class Rectangle:
-    """A class that defines a rectangle"""
+    """A class which defines a rectangle"""
     pass
