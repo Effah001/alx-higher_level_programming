@@ -32,6 +32,6 @@ class Rectangle:
         self.__height = value
 
     def __init__(self, width=0, height=0):
-            """instantiating of the class"""
+        """instantiating of the class"""
         self.width = width
         self.height = height
