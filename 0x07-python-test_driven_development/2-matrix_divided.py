@@ -27,9 +27,4 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            matrix[i][j] = round(matrix[i][j] / div, 2)
-
-    return (matrix)
+    return [[round(i/div, 2) for i in j] for j in matrix]
