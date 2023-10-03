@@ -2,7 +2,7 @@
 Doctest for 100-matrix_mul.py
 =============================
 
-	>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+	>>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 	>>> m_a = [
 	... [2, 4],
 	... [6, 8]
