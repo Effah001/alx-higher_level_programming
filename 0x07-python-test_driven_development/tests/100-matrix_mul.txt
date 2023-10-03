@@ -6,11 +6,11 @@ Doctest for 100-matrix_mul.py
 	>>> m_a = [
 	... [2, 4],
 	... [6, 8]
-	...]
+	... ]
 	>>> m_b = [
 	... [1, 2],
 	... [3, 4]
-	...]
+	... ]
 	>>> print(matrix_mul(m_a, m_b))
 	[[14, 20], [30, 44]]
 
@@ -19,7 +19,7 @@ Doctest for 100-matrix_mul.py
 	>>> m_b = [
 	... [1, 2],
 	... [3, 4]
-	...]
+	... ]
 	>>> print(matrix_mul(m_a, m_b))
 	[[11, 14]]
 
@@ -31,7 +31,7 @@ Doctest for 100-matrix_mul.py
 	>>> m_b = [
 	... [5.0, 3.2],
 	... [2.1, 3.4]
-	...]
+	... ]
 	>>> print(matrix_mul(m_a, m_b))
 	[[11.33, 10.18], [23.62, 24.52]]
 
