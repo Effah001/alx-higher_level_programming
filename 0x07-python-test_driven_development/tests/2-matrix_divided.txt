@@ -3,6 +3,8 @@
 A doctest for matrix_divided function
 ========================================
 
+This module defines a matrix division function
+
 Usage
 =====
 
