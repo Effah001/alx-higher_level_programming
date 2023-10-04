@@ -21,7 +21,7 @@ Doctest for 100-matrix_mul.py
 	... [3, 4]
 	... ]
 	>>> print(matrix_mul(m_a, m_b))
-	[[11, 14]]
+	[[11, 16]]
 
 
 	>>> m_a = [[1, 2]]
