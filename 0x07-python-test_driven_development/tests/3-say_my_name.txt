@@ -6,7 +6,7 @@ A doctest to test the say_my_name function
 	>>> name = __import__("3-say_my_name").say_my_name
 
 	>>> name("Effah")
-	My name is Effah
+	My name is Effah 
 
 	>>> name("Francis", "Effah")
 	My name is Francis Effah
