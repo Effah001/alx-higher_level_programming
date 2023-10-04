@@ -8,7 +8,7 @@ A doctest to test the say_my_name function
 	>>> name("Effah")
 	My name is Effah
 
-	>>> name("Francis","Effah")
+	>>> name("Francis", "Effah")
 	My name is Francis Effah
 
 	>>> name(3)
