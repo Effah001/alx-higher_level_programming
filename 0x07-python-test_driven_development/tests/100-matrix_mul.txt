@@ -24,6 +24,13 @@ Doctest for 100-matrix_mul.py
 	[[11, 14]]
 
 
+	>>> m_a = [[1, 2]]
+	>>> m_b = [1, 2]
+	>>> print(matrix_mul(m_a, m_b))
+	Traceback ( most recent call last)
+	TypeError : m_b must be list of list
+
+
 	>>> m_a = [
 	... [1.1, 2.2],
 	... [3.3, 4.4]
