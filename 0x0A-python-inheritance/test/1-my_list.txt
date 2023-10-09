@@ -1,0 +1,64 @@
+=====================================
+Test case for ```1-my_list``` module
+=====================================
+
+using ```MyList```
+-------------------
+
+	>>> MyList = __import__("1-my_list").MyList
+
+
+	>>> my_list = MyList()
+    	>>> my_list.append(3)
+    	>>> my_list.append(1)
+    	>>> my_list.append(2)
+    	>>> my_list.append(4)
+    	>>> my_list.append(5)
+    	>>> my_list.print_sorted()
+    	[1, 2, 3, 4, 5]
+
+    	>>> print(my_list)
+    	[1, 3, 2, 5, 4]
+    	>>> my_list.print_sorted() == my_list
+    	[1, 2, 3, 4, 5]
+    	False
+
+    	>>> print(my_list)
+    	[1, 3, 5, 4, 2]
+    	>>> my_list.print_sorted() == my_list
+    	[1, 2, 3, 4, 5]
+    	False
+
+    	>>> my_list = MyList("world")
+    
+    	>>> my_list
+    	['w', 'o', 'r', 'l', 'd']
+
+    	>>> my_list.print_sorted()
+    	['d', 'l', 'o', 'r', 'w']
+
+
+    	>>> my_list = MyList()
+    	>>> print(my_list)
+   	 []
+    	>>> my_list.print_sorted()
+   	 []
+
+    	>>> my_list.append(5)
+    	>>> my_list.append(6)
+    	>>> print(my_list)
+    	[5, 6]
+    	>>> my_list.print_sorted()
+    	[5, 6]
+
+    	>>> my_list.append(2)
+    	>>> my_list.print_sorted()
+    	[2, 5, 6]
+
+    	>>> my_list = MyList([2, 3, 4])
+    	>>> nlist = my_list.print_sorted()
+    	[2, 3, 4]
+    	>>> print(my_list)
+    	[2, 3, 4]
+    	>>> my_list is nlist
+    	False
