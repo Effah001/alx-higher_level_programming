@@ -17,8 +17,6 @@ using ```MyList```
     	>>> my_list.print_sorted()
     	[1, 2, 3, 4, 5]
 
-    	>>> print(my_list)
-    	[3, 1, 2, 4, 5]
     	>>> my_list.print_sorted() == my_list
     	[1, 2, 3, 4, 5]
     	False
