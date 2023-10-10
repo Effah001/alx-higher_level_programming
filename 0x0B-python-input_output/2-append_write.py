@@ -4,4 +4,4 @@
 def append_write(filename="", text=""):
     """open a file, create if it doesn't exist"""
     with open(filename, 'a') as f:
-        f.write(text)
+        return f.write(text)
