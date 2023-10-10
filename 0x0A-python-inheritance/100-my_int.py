@@ -5,6 +5,8 @@
 
 
 class MyInt(int):
+	"""MyInt has == and != operators inverted"""
+
     def __eq__(self, value):
         return self.real != value
 
