@@ -12,6 +12,3 @@ class MyInt(int):
 
     def __ne__(self, value):
         return self.real == value
-
-
-
