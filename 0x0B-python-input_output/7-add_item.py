@@ -4,6 +4,7 @@ Documentation for add_item
 """
 import sys
 import json
+import os
 
 
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
@@ -11,7 +12,7 @@ load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
 file = "add_item.json"
 
-if os.path.exist(file):
+if os.path.exists(file):
     data = load_from_json_file(file)
 else:
     data = []
