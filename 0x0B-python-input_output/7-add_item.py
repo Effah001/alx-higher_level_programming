@@ -17,6 +17,6 @@ if os.path.exists(file):
 else:
     data = []
 
-data.append(sys.argv[1:])
+data.extend(sys.argv[1:])
 
 save_to_json_file(data, file)
