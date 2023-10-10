@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" 
-    A function that returns JSON
-    representation
+""" A function that returns JSON
+representation
 """
 import json
 
