@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
+"""Documentation of the 5-save_to_json_file"""
 import json
+
 
 def save_to_json_file(my_obj, filename):
     """
