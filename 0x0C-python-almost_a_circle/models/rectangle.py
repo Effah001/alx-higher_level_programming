@@ -17,45 +17,49 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
-    def get_width(self):
+    def width(self):
         return self.__width
 
-    def set_width(self, width):
+    @width.setter
+    def width(self, width):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value <= 0
+        if value <= 0:
             raise TypeError("width must be greater than zero")
         self.__width = width
 
-   @property 
-    def get_height(self):
+    @property 
+    def height(self):
         return self.__height
 
-    def set_height(self, height):
+    @height.setter
+    def height(self, height):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value <= 0
+        if value <= 0:
             raise TypeError("height must be greater than zero")
         self.__height= height
 
     @property
-    def get_x(self):
+    def x(self):
         return self.__x
 
-    def set_x(self, x):
+    @x.setter
+    def x(self, x):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if value < 0
+        if value < 0:
             raise TypeError("x must be greater than zero")
         self.__x = x
 
     @property
-    def get_y(self):
+    def y(self):
         return self.__y
 
-    def set_y(self, y):
+    @y.setter
+    def y(self, y):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if value <0
+        if value <0:
             raise TypeError("y must be greater than zero")
         self.__y = y
