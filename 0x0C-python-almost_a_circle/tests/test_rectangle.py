@@ -45,3 +45,28 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(1, 2, 3, 4)
         r2 = Rectangle(3, 4, 5, 6)
         self.assertNotEqual(r1.id, r2.id)
+
+class TestRectangleArea(unittes.TestCase):
+    def test_area1(self):
+        r1 = Rectangle(2, 3)
+        self.assertEqual(r1.area(), 6)
+
+    def test_area2(self):
+        r1 = Rectangle(2, 3)
+        self.assertNotEqual(r1.area(), 5)
+
+    def test_area3(self):
+        r1 = Rectangle(2, 3)
+        r2 = Rectangle(2, 3)
+        self.assertEqual(r1.area(), r2.area())
+
+    def test_area4(self):
+        r1 = Rectangle(1, 3)
+        r2 = Rectangle(2, 3)
+        self.assertNotEqual(r1.area(), r2.area())
+
+
+
+ 
+ 
+
