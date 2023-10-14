@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
     def setUp(self):
-        self.rectangle = Rectangle(10, 5, x, y, id=None)
+        self.rectangle = Rectangle(10, 5, 0, 0, id=None)
 
     def test_validation(self):
         self.assertEqual(self.rectangle.get_width(), 10)
@@ -16,33 +16,33 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rectangle.get_x(), 0)
         self.assertEqual(self.rectangle.get_y(), 0)
 
-    def two_arg(self):
+    def two_args(self):
         r1 = Rectangle(1, 2)
         r2 = Rectangle(3, 4)
         self.assertEqual(r1.id + 1, r2.id)
 
-    def two_arg(self):
+    def two_args2(self):
         r1 = Rectangle(1, 2)
         r2 = Rectangle(3, 4)
-        self.assertnotEqual(r1.id, r2.id)
+        self.assertNotEqual(r1.id, r2.id)
 
     
-     def three_arg(self):
+     def three_args(self):
         r1 = Rectangle(1, 2, 3)
         r2 = Rectangle(3, 4, 5)
         self.assertEqual(r1.id + 1, r2.id)
 
-    def three_arg(self):
+    def three_args3(self):
         r1 = Rectangle(1, 2, 3)
         r2 = Rectangle(3, 4, 5)
-        self.assertnotEqual(r1.id, r2.id)
+        self.assertNotEqual(r1.id, r2.id)
 
-    def four_arg(self):
+    def four_args(self):
         r1 = Rectangle(1, 2, 3, 4)
         r2 = Rectangle(3, 4, 5, 6)
         self.assertEqual(r1.id + 1, r2.id)
 
-    def one_arg(self):
+    def four_args(self):
         r1 = Rectangle(1, 2, 3, 4)
         r2 = Rectangle(3, 4, 5, 6)
-        self.assertnotEqual(r1.id, r2.id)
+        self.assertNotEqual(r1.id, r2.id)
