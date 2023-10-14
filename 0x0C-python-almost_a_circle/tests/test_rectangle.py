@@ -26,7 +26,6 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(3, 4)
         self.assertNotEqual(r1.id, r2.id)
 
-    
      def test_three_args(self):
         r1 = Rectangle(1, 2, 3)
         r2 = Rectangle(3, 4, 5)
