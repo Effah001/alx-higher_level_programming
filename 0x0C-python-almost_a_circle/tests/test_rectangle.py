@@ -16,33 +16,33 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rectangle.get_x(), 0)
         self.assertEqual(self.rectangle.get_y(), 0)
 
-    def two_args(self):
+    def test_two_args(self):
         r1 = Rectangle(1, 2)
         r2 = Rectangle(3, 4)
         self.assertEqual(r1.id + 1, r2.id)
 
-    def two_args2(self):
+    def test_two_args2(self):
         r1 = Rectangle(1, 2)
         r2 = Rectangle(3, 4)
         self.assertNotEqual(r1.id, r2.id)
 
     
-     def three_args(self):
+     def test_three_args(self):
         r1 = Rectangle(1, 2, 3)
         r2 = Rectangle(3, 4, 5)
         self.assertEqual(r1.id + 1, r2.id)
 
-    def three_args3(self):
+    def test_three_args3(self):
         r1 = Rectangle(1, 2, 3)
         r2 = Rectangle(3, 4, 5)
         self.assertNotEqual(r1.id, r2.id)
 
-    def four_args(self):
+    def test_four_args(self):
         r1 = Rectangle(1, 2, 3, 4)
         r2 = Rectangle(3, 4, 5, 6)
         self.assertEqual(r1.id + 1, r2.id)
 
-    def four_args(self):
+    def test_four_args(self):
         r1 = Rectangle(1, 2, 3, 4)
         r2 = Rectangle(3, 4, 5, 6)
         self.assertNotEqual(r1.id, r2.id)
