@@ -72,7 +72,7 @@ class TestRectangleDisplay(unittest.TestCase):
         r2 = Rectangle(5, 4)
         expected_output = "#####\n#####\n#####\n#####\n"
 
-        with patch("sys.stdout", newStringIO) as new_output:
+        with patch("sys.stdout", new=StringIO()) as new_output:
             r2.display()
             self.assertEqual(new_output.getvalue(), expected_output)
 
@@ -80,7 +80,7 @@ class TestRectangleDisplay(unittest.TestCase):
         r3 = Rectangle(5, 4)
         expected_output = "#\n"
 
-        with patch("sys.stdout", new=StringIO) as new_output:
+        with patch("sys.stdout", new=StringIO()) as new_output:
             r3.display()
             self.assertEqual(new_output.getvalue(), expected_output)
 
@@ -113,6 +113,6 @@ class TestRectangleDisplayWithOffset(unittest.TestCase):
         r2 = Rectangle(5, 4, 1, 0)
         expected_output = "#####\n #####\n #####\n #####\n"
 
-        with patch("sys.stdout", new=StringIO) as new_output:
+        with patch("sys.stdout", new=StringIO()) as new_output:
             r2.display()
             self.assertEqual(new_output.getvalue(), expected_output)
