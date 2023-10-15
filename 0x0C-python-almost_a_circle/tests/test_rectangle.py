@@ -4,6 +4,8 @@ Unittest for Base Class
 """
 
 import unittest
+from unittes.mock import patch
+from io import stringIO
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
@@ -64,6 +66,32 @@ class TestRectangleArea(unittes.TestCase):
         r1 = Rectangle(1, 3)
         r2 = Rectangle(2, 3)
         self.assertNotEqual(r1.area(), r2.area())
+
+ class TestRectangleDisplay(unittest.TestCase):
+     def test_display(self):
+         r = Rectangle(3, 2)
+         expected_output = "###\n###\n"
+         
+         with patch("sys.stdout", new_file=StringIO()) as new_output:
+             r.display()
+             self.assertEqual(new_output.getvalue(), expected_output)
+
+    def test_display_5x4(self):
+        r = Rectangle(5, 4)
+        expected_output = "#####\n#####\n#####\n#####\n"
+
+        with patch("sys.stdout", new_callable=StringIO) as new_output:
+            r.display()
+            self.assertEqual(new_output.getvalue(), expected_output)
+
+   def test_display_1x1(self):
+        r = Rectangle(5, 4)
+        expected_output = "#\n"
+
+        with patch("sys.stdout", new_callable=StringIO) as new_output:
+            r.display()
+            self.assertEqual(new_output.getvalue(), expected_output)
+ 
 
 
 
