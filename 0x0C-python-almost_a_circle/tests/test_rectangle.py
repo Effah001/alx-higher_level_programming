@@ -77,7 +77,7 @@ class TestRectangleDisplay(unittest.TestCase):
             self.assertEqual(new_output.getvalue(), expected_output)
 
     def test_display_1x1(self):
-        r3 = Rectangle(5, 4)
+        r3 = Rectangle(1, 1)
         expected_output = "#\n"
 
         with patch("sys.stdout", new=StringIO()) as new_output:
