@@ -107,3 +107,20 @@ class TestStrMethod(unittest.TestCase):
         rectangle = Rectangle(4, 2, 1)
         expected_output = "[Rectangle] (1) 1/0 - 4/2
         self.assertEqual(str(rectangle), expected_output)
+
+class TestRectangleDisplayWithOffset(unittest.TestCase):
+     def test_display_offset(self):
+         r = Rectangle(3, 2, 1, 2)
+         expected_output = "  ###\n ###\n"
+         
+         with patch("sys.stdout", new_file=StringIO()) as new_output:
+             r.display()
+             self.assertEqual(new_output.getvalue(), expected_output)
+
+    def test_display_5x4(self):
+        r = Rectangle(5, 4, 1, 0)
+        expected_output = "#####\n #####\n #####\n #####\n"
+
+        with patch("sys.stdout", new_callable=StringIO) as new_output:
+            r.display()
+            self.assertEqual(new_output.getvalue(), expected_output)
