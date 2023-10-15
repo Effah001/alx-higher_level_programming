@@ -102,3 +102,8 @@ class TestStrMethod(unittest.TestCase):
         rectangle = Rectangle(5, 3, 2, 3, 2)
         expected_output = "[Rectangle] (2) 2/3 - 5/3
         self.assertEqual(str(rectangle), expected_output)
+
+    def test_str(self):
+        rectangle = Rectangle(4, 2, 1)
+        expected_output = "[Rectangle] (1) 1/0 - 4/2
+        self.assertEqual(str(rectangle), expected_output)
