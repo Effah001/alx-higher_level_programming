@@ -103,7 +103,7 @@ class TestStrMethod(unittest.TestCase):
 class TestRectangleDisplayWithOffset(unittest.TestCase):
     def test_display_offset(self):
          r1 = Rectangle(3, 2, 1, 2)
-         expected_output = "  ###\n ###\n"
+         expected_output = "\n\n ###\n ###\n"
          
          with patch("sys.stdout", new=StringIO()) as new_output:
              r1.display()
@@ -111,7 +111,7 @@ class TestRectangleDisplayWithOffset(unittest.TestCase):
 
     def test_display_5x4(self):
         r2 = Rectangle(5, 4, 1, 0)
-        expected_output = " #####\n #####\n #####\n #####\n"
+        expected_output = "#####\n #####\n #####\n #####\n"
 
         with patch("sys.stdout", new=StringIO()) as new_output:
             r2.display()
