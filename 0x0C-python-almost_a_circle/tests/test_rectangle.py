@@ -114,5 +114,42 @@ class TestRectangleDisplayWithOffset(unittest.TestCase):
         expected_output = " #####\n #####\n #####\n #####\n"
 
         with patch("sys.stdout", new=StringIO()) as new_output:
-            r2.display()
-            self.assertEqual(new_output.getvalue(), expected_output)
+             r2.display()
+             self.assertEqual(new_output.getvalue(), expected_output)
+
+class TestUpdateValue(unittest.TestCase):
+    def test_update_args(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update(10, 20, 30, 40, 50)
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
+
+    def test_update_args2(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update(10, 20)
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 2)
+        self.assertEqual(r.x, 3)
+        self.assertEqual(r.y, 4)
+
+    def test_update_args3(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update(10, 20, 30, 40, 50, 60)
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
+
+    def test_update_args4(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update()
+        self.assertEqual(r.id, 5)
+        self.assertEqual(r.width, 1)
+        self.assertEqual(r.height, 2)
+        self.assertEqual(r.x, 3)
+        self.assertEqual(r.y, 4)
