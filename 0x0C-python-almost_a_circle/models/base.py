@@ -2,6 +2,7 @@
 """
 The script for our base class
 """
+import json
 
 
 class Base:
