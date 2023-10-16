@@ -5,10 +5,12 @@ Docstripy for our rectangle class
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Creating Square class that inherits
     from Rectangle
     """
+
     def __init__(self, size, x=0, y=0, id=None):
         """Initialize a square"""
         super().__init__(size, size, x, y, id)
@@ -42,12 +44,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Return the dictiory representation of a square"""
-        square_dict = {
-            "id": self.id,
-            "size": self.width,
-            "x": self.x,
-            "y": self.y
-        }
+        square_dict = {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
         return square_dict
 
     def __str__(self):
