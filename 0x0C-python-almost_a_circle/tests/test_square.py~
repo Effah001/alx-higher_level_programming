@@ -62,13 +62,6 @@ class TestSquareDict(unittest.TestCase):
         s1_dict = s1.to_dictionary()
         expected_dict = {'id': 2, 'size': 4, 'x': 3, 'y': 2}
         self.assertEqual(s1_dict, expected_dict)
-
-    def test1(self):
-        s1 = Square(4, 0, 0, 2)
-        s1_dict = s1.to_dictionary()
-        expected_dict = {'id': 2, 'size': 4}
-        self.assertEqual(s1_dict, expected_dict)
-
     def test_str(self):
         s5 = Square(2, 3, 3, 4)
         self.assertEqual(str(s5), "[Square] (4) 3/3 - 2")

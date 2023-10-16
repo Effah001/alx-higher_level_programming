@@ -153,3 +153,25 @@ class TestUpdateValue(unittest.TestCase):
         self.assertEqual(r.height, 2)
         self.assertEqual(r.x, 3)
         self.assertEqual(r.y, 4)
+
+class TestDictionary(unittest.TestCase):
+    def test_dict(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        exp_dict = {'id': 5, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
+        self.assertEqual(r.to_dictionary(), exp_dict)
+
+    def test_dict(self):
+        r = Rectangle(5, 2, 6, 4, 5)
+        exp_dict = {'id': 5, 'width': 5, 'height': 2, 'x': 6, 'y': 4}
+        self.assertEqual(r.to_dictionary(), exp_dict)
+
+    def test_dict(self):
+        r = Rectangle(1, 2, 3,)
+        exp_dict = {'id': None, 'width': 1, 'height': 2, 'x': 3, 'y': 0}
+        self.assertEqual(r.to_dictionary(), exp_dict)
+
+    def test_dict(self):
+        r = Rectangle(1, 2,)
+        exp_dict = {'id': None, 'width': 1, 'height': 2, 'x': 0, 'y': 0}
+        self.assertEqual(r.to_dictionary(), exp_dict)
+

@@ -94,5 +94,16 @@ class Rectangle(Base):
             for i, arg in kwargs.items():
                 setattr(self, i, arg)
 
+    def to_dictionary(self):
+        """Returns the dictionary representation of a rectangle"""
+        rec_dict = {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height, 
+                'x': self.x,
+                'y': self.y
+            }
+        return rec_dict
+
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
