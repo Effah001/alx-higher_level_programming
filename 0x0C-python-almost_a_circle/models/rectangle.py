@@ -6,9 +6,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ Create Rectangle class that inherits
+    """Create Rectangle class that inherits
     from Base
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializing the rectangle"""
         super().__init__(id)
@@ -31,7 +32,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-    @property 
+    @property
     def height(self):
         """Get the height"""
         return self.__height
@@ -43,7 +44,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-        self.__height= value
+        self.__height = value
 
     @property
     def x(self):
@@ -69,13 +70,13 @@ class Rectangle(Base):
         """Set the y value"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if value <0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
         """Return the value of the area"""
-        return(self.__width * self.__height)
+        return self.__width * self.__height
 
     def display(self):
         """Print the rectangle with x and y offsets"""
@@ -98,13 +99,15 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Returns the dictionary representation of a rectangle"""
         rec_dict = {
-                'id': self.id,
-                'width': self.width,
-                'height': self.height, 
-                'x': self.x,
-                'y': self.y
-            }
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
         return rec_dict
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height
+        )
