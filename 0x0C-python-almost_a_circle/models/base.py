@@ -11,6 +11,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """initialize the class"""
         if id is not  None and not isinstance(id, int):
             raise ValueError("Id must be an integer")
         if id is not None:
