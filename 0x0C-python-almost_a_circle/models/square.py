@@ -2,7 +2,6 @@
 """
 Docstripy for our rectangle class
 """
-
 from models.rectangle import Rectangle
 
 
