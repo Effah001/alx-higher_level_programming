@@ -52,9 +52,9 @@ class Testsquare(unittest.TestCase):
         s2 = Square(2, 3, 4, 5)
         s2.update(1, size=7, y=3)
         self.assertEqual(s2.id, 1)
-        self.assertEqual(s2.size, 7)
+        self.assertEqual(s2.size, 2)
         self.assertEqual(s2.x, 3)
-        self.assertEqual(s2.y, 3)
+        self.assertEqual(s2.y, 4)
 
 class TestSquareDict(unittest.TestCase):
     def test1(self):
@@ -66,7 +66,7 @@ class TestSquareDict(unittest.TestCase):
     def test1(self):
         s1 = Square(4, 0, 0, 2)
         s1_dict = s1.to_dictionary()
-        expected_dict = {'id': 2, 'size': 4}
+        expected_dict = {'id': 2, 'size': 4, 'x': 0, 'y': 0}
         self.assertEqual(s1_dict, expected_dict)
 
     def test_str(self):

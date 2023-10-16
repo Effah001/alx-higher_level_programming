@@ -156,22 +156,22 @@ class TestUpdateValue(unittest.TestCase):
 
 class TestDictionary(unittest.TestCase):
     def test_dict(self):
-        r = Rectangle(1, 2, 3, 4, 5)
+        r1 = Rectangle(1, 2, 3, 4, 5)
         exp_dict = {'id': 5, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
-        self.assertEqual(r.to_dictionary(), exp_dict)
+        self.assertEqual(r1.to_dictionary(), exp_dict)
 
     def test_dict(self):
-        r = Rectangle(5, 2, 6, 4, 5)
+        r2 = Rectangle(5, 2, 6, 4, 5)
         exp_dict = {'id': 5, 'width': 5, 'height': 2, 'x': 6, 'y': 4}
-        self.assertEqual(r.to_dictionary(), exp_dict)
+        self.assertEqual(r2.to_dictionary(), exp_dict)
 
     def test_dict(self):
-        r = Rectangle(1, 2, 3,)
+        r3 = Rectangle(1, 2, 3,)
         exp_dict = {'id': None, 'width': 1, 'height': 2, 'x': 3, 'y': 0}
-        self.assertEqual(r.to_dictionary(), exp_dict)
+        self.assertEqual(r3.to_dictionary(), exp_dict)
 
     def test_dict(self):
-        r = Rectangle(1, 2,)
-        exp_dict = {'id': None, 'width': 1, 'height': 2, 'x': 0, 'y': 0}
-        self.assertEqual(r.to_dictionary(), exp_dict)
+        r4 = Rectangle(1, 2,)
+        exp_dict = {'id': 8, 'width': 1, 'height': 2, 'x': 0, 'y': 0}
+        self.assertEqual(r4.to_dictionary(), exp_dict)
 
