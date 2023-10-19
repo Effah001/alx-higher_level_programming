@@ -43,8 +43,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Return the dictiory representation of a square"""
-        square_dict = {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
-        return square_dict
+        sq_dict = {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+        return sq_dict
 
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
