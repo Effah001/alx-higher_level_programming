@@ -6,5 +6,5 @@ ON tvg.id = tsg.genre_id
 INNER JOIN tv_shows ts
 ON ts.id = tsg.show_id
 WHERE tvg.name = "comedy"
-GROUP BY s.title
-ORDER BY s.title;
+GROUP BY ts.title
+ORDER BY ts.title;
