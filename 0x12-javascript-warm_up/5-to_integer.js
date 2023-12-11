@@ -1,6 +1,6 @@
-#!/usr/bin/node 
+#!/usr/bin/node
 
-const arg = process.argv[2]
+const arg = process.argv[2];
 
 const integerValue = parseInt(arg, 10);
 
