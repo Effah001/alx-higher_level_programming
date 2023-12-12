@@ -20,15 +20,15 @@ class Rectangle {
   }
 
   rotate () {
-  let temp = '';
-  temp = this.width;
-  this.width = this.height;
-  this.height = temp;
+    let temp = '';
+    temp = this.width;
+    this.width = this.height;
+    this.height = temp;
   }
 
   double () {
-  this.width *= 2;
-  this.height *= 2;
+    this.width *= 2;
+    this.height *= 2;
   }
 }
 
