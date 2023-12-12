@@ -11,7 +11,7 @@ class Rectangle {
   print () {
     let rectangle = '';
     for (let i = 0; i < this.height; i++) {
-      rectangle += 'x'.repeat(this.width);
+      rectangle += 'X'.repeat(this.width);
       if (i < this.height - 1) {
         rectangle += '\n';
       }
