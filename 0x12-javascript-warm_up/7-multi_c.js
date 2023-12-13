@@ -3,8 +3,9 @@
 const x = process.argv[2];
 
 if (!isNaN(x) && x > 0) {
-  let repeats = 'C is fun'.repeat(x);
-  console.log(repeats);
+  for (let i = 0; i < x; i++) {
+    console.log('C is fun');
+  }
 } else {
-  console.log('Missing number of occurrences');
+  console.log('Missing number of occurrences');
 }
