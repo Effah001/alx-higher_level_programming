@@ -8,6 +8,7 @@ from the database hbtn_0e_0_usa
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
     user_name = sys.argv[1]
     pass_word = sys.argv[2]
