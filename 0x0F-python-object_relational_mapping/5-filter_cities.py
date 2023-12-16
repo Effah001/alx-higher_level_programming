@@ -33,9 +33,9 @@ if __name__ == "__main__":
             "WHERE s.name LIKE %s "
             "ORDER BY c.id "
        )
-    
+
     cs.execute(query, (input_name + '%', ))
-    
+
     rows = cs.fetchall()
     output = ", ".join(row[0] for row in rows)
     print(output)
