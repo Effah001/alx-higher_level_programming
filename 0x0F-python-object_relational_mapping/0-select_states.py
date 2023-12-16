@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    cs.execute("SELECT * FROM states ORDER BY id")
+    cs.execute("SELECT * FROM states ORDER BY id ASC")
 
     rows = cs.fetchall()
 
