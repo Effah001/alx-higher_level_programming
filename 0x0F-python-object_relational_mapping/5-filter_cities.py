@@ -21,7 +21,8 @@ if __name__ == "__main__":
     """
 
     my_db = MySQLdb.connect(
-            host="localhost", port=3306, user=user_name, passwd=pass_word, db=db_name)
+            host="localhost", port=3306, user=user_name,
+            passwd=pass_word, db=db_name)
 
     cs = my_db.cursor()
 
@@ -30,8 +31,9 @@ if __name__ == "__main__":
             + " ON c.state_id = s.id"
             + " WHERE %s = s.name"
             " ORDER BY c.id",
-             (input_name,),
-       )
+            (input_name,),
+        )
+
     cs.execute(query)
 
     rows = cs.fetchall()
