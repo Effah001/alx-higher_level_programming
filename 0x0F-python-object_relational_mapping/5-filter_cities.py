@@ -26,17 +26,6 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-<<<<<<< HEAD
-    query = "SELECT c.name"
-            + " FROM cities c INNER JOIN states s"
-            + " ON c.state_id = s.id"
-            + " WHERE %s = s.name"
-            " ORDER BY c.id",
-            (input_name,),
-        )
-
-    cs.execute(query)
-=======
     query = (
             "SELECT c.name "
             "FROM cities c INNER JOIN states s "
@@ -46,8 +35,7 @@ if __name__ == "__main__":
        )
     
     cs.execute(query, (input_name + '%', ))
->>>>>>> fb226446b28bad62738f9cc24a8428222c428f43
-
+    
     rows = cs.fetchall()
     output = ", ".join(row[0] for row in rows)
     print(output)
