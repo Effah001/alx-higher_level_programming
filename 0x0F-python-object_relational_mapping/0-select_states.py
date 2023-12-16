@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+Module Doc
+"""
+
 import MySQLdb
 import sys
 
@@ -8,9 +12,9 @@ import sys
     pass_word sys.argv[2]
     db_name = sys.argv[3]
 
-    connection = MySQLdb.connect(host="localhost", port=3306, user=user_name, passwd=pass_word, db=db_name)
+    my_db = MySQLdb.connect(host="localhost", port=3306, user=user_name, passwd=pass_word, db=db_name)
 
-    cs = connection.cursor()
+    cs = my_db.cursor()
 
     cs.execute("SELECT * FROM states ORDER BY states.id ASC")
 
@@ -18,5 +22,8 @@ import sys
 
     for row in rows:
         print(row)
+
+    cs.close()
+    db.close()
 
     if __name__ == "__main__":
