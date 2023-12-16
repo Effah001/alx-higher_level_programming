@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    cs.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cs.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
 
     rows = cs.fetchall()
 
