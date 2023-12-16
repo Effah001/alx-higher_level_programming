@@ -26,6 +26,6 @@ if __name__ == "__main__":
         print(row)
 
     cs.close()
-    db.close()
+    my_db.close()
 
 
