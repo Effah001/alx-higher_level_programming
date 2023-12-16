@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
- a script that lists all states with
- a name starting with N (upper N)
- from the database hbtn_0e_0_usa
+a script that takes in the name of a state as an argument
+and lists all cities of that state,
+using the database hbtn_0e_4_usa
 """
 
 
@@ -25,10 +25,15 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    query = "SELECT * FROM states WHERE BINARY name LIKE %s  ORDER BY cities.id ASC"
-    cs.execute(query, (input_name + '%',))
+    query = "SELECT c.name"
+            + " FROM cities c INNER JOIN states s"
+            + " ON c.state_id = s.id"
+            + " WHERE %s = s.name"
+            " ORDER BY c.id",
+             (input_name,),
+       )
+    cs.execute(query)
 
     rows = cs.fetchall()
-
-    for row in rows:
-        print(row)
+    output = ", ".join(row[0] for row in rows)
+    print(output)
