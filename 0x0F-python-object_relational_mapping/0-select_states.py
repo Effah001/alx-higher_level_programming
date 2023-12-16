@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """
-Module Doc
+a script that lists all states from the database hbtn_0e_0_usa
 """
 
 
 import MySQLdb
 import sys
 
+"""
+Acess the database and get the states
+"""
 
 if __name__ == "__main__":
     user_name = sys.argv[1]
