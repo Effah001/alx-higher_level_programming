@@ -29,7 +29,7 @@ if __name__ == "__main__":
             "SELECT c.name "
             "FROM cities c INNER JOIN states s "
             "ON c.state_id = s.id "
-            " WHERE %s = s.name "
+            "WHERE s.name LIKE %s "
             "ORDER BY c.id "
        )
     
