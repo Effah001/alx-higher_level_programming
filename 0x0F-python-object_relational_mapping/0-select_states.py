@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Module Doc
 """
@@ -18,7 +17,7 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    cs.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cs.execute("SELECT * FROM states ORDER BY id")
 
     rows = cs.fetchall()
 
@@ -27,5 +26,3 @@ if __name__ == "__main__":
 
     cs.close()
     my_db.close()
-
-
