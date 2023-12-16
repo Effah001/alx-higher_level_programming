@@ -24,7 +24,10 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    cs.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cs.execute("SELECT * c.id, c.name, s.name"
+               + " FROM cities c INNER JOIN states s"
+               + " ON c.state_id = s.id"
+               + "ORDER BY c.id ASC")
 
     rows = cs.fetchall()
 
