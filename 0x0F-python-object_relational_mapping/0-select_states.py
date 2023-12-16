@@ -4,10 +4,12 @@
 Module Doc
 """
 
+
 import MySQLdb
 import sys
 
 
+if __name__ == "__main__":
     user_name = sys.argv[1]
     pass_word = sys.argv[2]
     db_name = sys.argv[3]
@@ -26,4 +28,4 @@ import sys
     cs.close()
     db.close()
 
-if __name__ == "__main__":
+
