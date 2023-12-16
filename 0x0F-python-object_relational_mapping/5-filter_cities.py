@@ -25,14 +25,15 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    query = "SELECT c.name"
-            + " FROM cities c INNER JOIN states s"
-            + " ON c.state_id = s.id"
-            + " WHERE %s = s.name"
-            " ORDER BY c.id",
-             (input_name,),
+    query = (
+            "SELECT c.name "
+            "FROM cities c INNER JOIN states s "
+            "ON c.state_id = s.id "
+            " WHERE %s = s.name "
+            "ORDER BY c.id "
        )
-    cs.execute(query)
+    
+    cs.execute(query, (input_name + '%', ))
 
     rows = cs.fetchall()
     output = ", ".join(row[0] for row in rows)
