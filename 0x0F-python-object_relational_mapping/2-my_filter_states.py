@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     cs = my_db.cursor()
 
-    cs.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY states.id ASC", (input_name + '%',))
+    cs.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY states.id ASC".format(input_name))
 
     rows = cs.fetchall()
 
