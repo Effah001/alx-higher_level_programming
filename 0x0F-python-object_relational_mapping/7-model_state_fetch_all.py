@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Access the database and get the states
     """
 
-    dburl = "mysql://{}:{}@localhost:3306/{}".format(sys.argv[1:4])
+    dburl = "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4])
 
     engine = create_engine(dburl)
 
