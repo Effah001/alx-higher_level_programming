@@ -11,6 +11,9 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+"""
+State class inherits from base
+""""
 
 class State(Base):
     __tablename__ = 'states'
