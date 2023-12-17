@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     dburl = "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4]))
 
-    engine = create_engine(db_url)
+    engine = create_engine(dburl)
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
