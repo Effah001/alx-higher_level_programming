@@ -10,6 +10,9 @@ from sqlalchemy.orm import sessionmaker
 import sys
 
 if __name__ == "__main__":
+    """
+    Print the first object in states
+    """
 
     dburl = "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4])
 
