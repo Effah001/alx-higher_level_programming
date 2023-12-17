@@ -19,12 +19,12 @@ if __name__ == "__main__":
     """
     Access the database and get the states
     """
+    
+    dburl = f"mysql://{user_name}:{pass_word}@localhost:3306/{db_name}"
+    
+    engine = create_engine(dburl)
 
-	dburl = f"mysql://{user_name}:{pass_word}@localhost:3306/{db_name}"
-	
-	engine = create_engine(dburl)
-	
-	Base.metadata.bind = engine
+    Base.metadata.bind = engine
 
     Base.metadata.create_all()
 
