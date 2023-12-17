@@ -12,13 +12,14 @@ import sys
 
 
 if __name__ == "__main__":
-    user_name = sys.argv[1]
-    pass_word = sys.argv[2]
-    db_name = sys.argv[3]
 
     """
     Access the database and get the states
     """
+
+    user_name = sys.argv[1]
+    pass_word = sys.argv[2]
+    db_name = sys.argv[3]
 
     dburl = f"mysql://{user_name}:{pass_word}@localhost:3306/{db_name}"
 
