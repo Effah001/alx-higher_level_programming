@@ -25,9 +25,9 @@ if __name__ == "__main__":
 
     engine = create_engine(dburl)
 
-    dbsession = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
 
-    session = dbsession()
+    session = Session()
 
     states = session.query(State).all()
 
