@@ -25,10 +25,6 @@ if __name__ == "__main__":
 
     engine = create_engine(dburl)
 
-    Base.metadata.bind = engine
-
-    Base.metadata.create_all()
-
     dbsession = sessionmaker(bind=engine)
 
     session = dbsession()
@@ -37,5 +33,3 @@ if __name__ == "__main__":
 
     for state in states:
         print(f"{state.id}: {state.name}")
-
-        session.close()
