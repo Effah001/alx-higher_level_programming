@@ -12,7 +12,7 @@ import sys
 if __name__ == "__main__":
     
     engine = create_engine(
-        "mysql://{}:{}@localhost/{}".format(*sys.argv[1:4]))
+        "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4]))
     
     Session.sessionmaker(bind=engine)
     session = Session()
