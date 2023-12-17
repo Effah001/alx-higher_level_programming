@@ -15,25 +15,26 @@ if __name__ == "__main__":
     user_name = sys.argv[1]
     pass_word = sys.argv[2]
     db_name = sys.argv[3]
-    
+
     """
     Access the database and get the states
     """
-    
-    dburl = f"mysql://{user_name}:{pass_word}@localhost:3306/{db_name}"
-    
-    engine = create_engine(dburl)
 
+	dburl = f"mysql://{user_name}:{pass_word}@localhost:3306/{db_name}"
+	
+	engine = create_engine(dburl)
+	
 	Base.metadata.bind = engine
 
-	Base.metadata.create_all()
+    Base.metadata.create_all()
 
-	dbsession = sessionmaker(bind=engine)
-	session = dbsession()
+    dbsession = sessionmaker(bind=engine)
 
-	states = session.query(State).all()
+    session = dbsession()
 
-	for state in states:
-		print(f"{state.id}: {state.name}")
+    states = session.query(State).all()
 
-	session.close()
+    for state in states:
+        print(f"{state.id}: {state.name}")
+        
+        session.close()
