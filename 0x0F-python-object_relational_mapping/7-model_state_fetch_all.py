@@ -6,7 +6,7 @@ from the database hbtn_0e_6_usa
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Base, State
+from models import State, Base
 import sys
 
 if __name__ == "__main__":
