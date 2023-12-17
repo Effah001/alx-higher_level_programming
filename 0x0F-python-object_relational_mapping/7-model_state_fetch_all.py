@@ -10,11 +10,12 @@ from sqlalchemy.orm import sessionmaker
 import sys
 
 if __name__ == "__main__":
-    
+
     engine = create_engine(
         "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4]))
-    
-    Session.sessionmaker(bind=engine)
+
+    Session = sessionmaker()
+    Session.configure(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id).all()
 
