@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-Module Doc
+a script that lists all states
+from the database hbtn_0e_6_usa
 """
-import sys
+
 from model_state import State, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import sys
 
-
-def main():
+if __name__ == "__main__":
     Session = sessionmaker()
     engine = create_engine(
         "mysql://{}:{}@localhost/{}".format(*sys.argv[1:4]), pool_pre_ping=True
@@ -19,7 +20,3 @@ def main():
 
     for state in states:
         print(f"{state.id}: {state.name}")
-
-
-if __name__ == "__main__":
-    main()
