@@ -23,6 +23,6 @@ if __name__ == "__main__":
     states = session.query(State).order_by(State.id).first()
 
     if states:
-        print(f"{states[0].id}: {states[0].name}")
+        print(f"{states.id}: {states.name}")
     else:
         print("Nothing")
