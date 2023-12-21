@@ -1,28 +1,29 @@
 #!/usr/bin/python3
 """
-a script that lists all states
-from the database hbtn_0e_6_usa
+Module Doc
 """
-
-from model_state import State, Base
+import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import sys
+from model_state import Base, State
 
-if __name__ == "__main__":
-    """
-    Print the first object in states
-    """
 
-    dburl = "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4])
-
-    engine = create_engine(dburl)
+def main():
     Session = sessionmaker()
+    engine = create_engine(
+        "mysql://{}:{}@localhost:3306/{}".format(*sys.argv[1:4]),
+        pool_pre_ping=True
+    )
     Session.configure(bind=engine)
     session = Session()
-    states = session.query(State).order_by(State.id).first()
+
+    state = session.query(State).order_by(State.id).first()
 
     if state:
         print(f"{state.id}: {state.name}")
     else:
         print("Nothing")
+
+
+if __name__ == "__main__":
+    main()
