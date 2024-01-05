@@ -1,3 +1,3 @@
 #!/bin/bash
 #Get all the methods from the server
-curl -si -X OPTIONS $@
+response=$(curl -si -X OPTIONS $@); echo "$response";
