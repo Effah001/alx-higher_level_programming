@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Get email"""
+
 import urllib.parse
 import urllib.request
 import sys
