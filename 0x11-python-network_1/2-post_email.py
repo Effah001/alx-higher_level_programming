@@ -4,13 +4,20 @@ import urllib.parse
 import urllib.request
 import sys
 
-url = sys.argv[1]
-email = sys.argv[2]
 
-data = urllib.parse.urlencode({'email': email})
-data = data.encode("utf-8")
+def main():
+    url = sys.argv[1]
+    email = sys.argv[2]
 
-with urllib.request.urlopen(url, data=data) as response:
-    result = response.read().decode("utf-8")
+    data = urllib.parse.urlencode({'email': email})
+    data = data.encode("utf-8")
+
+    with urllib.request.urlopen(url, data=data) as response:
+        result = response.read().decode("utf-8")
+
 
 print(result)
+
+
+if __name__ == "__main__":
+    main()
