@@ -16,8 +16,6 @@ def main():
         print(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
-    except urllib.error.URLError as e:
-        print(f"URL Error: {e.reason}")
 
 
 if __name__ == "__main__":
