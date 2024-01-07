@@ -5,7 +5,7 @@ import urllib.request
 import urllib.error
 
 url = sys.argv[1]
-reqst= urllib.request.Request(url)
+reqst = urllib.request.Request(url)
 
 try:
     response = urllib.request.urlopen(reqst)

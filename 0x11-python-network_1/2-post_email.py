@@ -14,4 +14,3 @@ with urllib.request.urlopen(url, data=data) as response:
     result = response.read().decode("utf-8")
 
 print(result)
-
