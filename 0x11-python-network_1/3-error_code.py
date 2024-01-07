@@ -12,7 +12,7 @@ def main():
     reqst = urllib.request.Request(url)
 
     try:
-        response = urllib.request.urlopen(reqst)
+        with response = urllib.request.urlopen(reqst)
         print(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
