@@ -2,9 +2,9 @@
 
 const request = require('request');
 
-const apiUrl = `https://swapi-api.alx-tools.com/api/films`;
+const apiUrl = 'https://swapi-api.alx-tools.com/api/films';
 
-request(apiUrl, function(error, response, body) {
+request(apiUrl, function (error, response, body) {
   if (error) {
     console.error('Error:', error);
     return;
