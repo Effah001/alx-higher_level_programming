@@ -11,8 +11,7 @@ request(apiUrl, function (error, response, body) {
   }
 
   if (response && response.statusCode === 200) {
-    const characterInfo = JSON.parse(body);
-    const films = characterInfo.films;
+    const films = JSON.parse(body).results;
     const idToSearch = 18;
     const filmsWithId = films.filter(film => film.episode_id === idToSearch);
     console.log(filmsWithId.length);
@@ -20,3 +19,4 @@ request(apiUrl, function (error, response, body) {
     console.error('Failed to fetch film details:', response && response.statusCode);
   }
 });
+
