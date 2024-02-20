@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-const apiUrl = 'https://swapi-api.alx-tools.com/api/films';
+const apiUrl = process.argv[2];
 
 request(apiUrl, function (error, response, body) {
   if (error) {
@@ -11,7 +11,8 @@ request(apiUrl, function (error, response, body) {
   }
 
   if (response && response.statusCode === 200) {
-    const films = JSON.parse(body).results;
+    const characterInfo = JSON.parse(body);
+    const films = characterInfo.films;
     const idToSearch = 18;
     const filmsWithId = films.filter(film => film.episode_id === idToSearch);
     console.log(filmsWithId.length);
@@ -19,3 +20,4 @@ request(apiUrl, function (error, response, body) {
     console.error('Failed to fetch film details:', response && response.statusCode);
   }
 });
+
