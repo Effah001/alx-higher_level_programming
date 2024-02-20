@@ -36,4 +36,3 @@ request(apiUrl, function (error, response, body) {
     console.error('Failed to fetch film details:', response && response.statusCode);
   }
 });
-
