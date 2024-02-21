@@ -9,14 +9,9 @@ request(apiUrl, function(error, response, body) {
     console.error('Error:', error);
     return;
   }
-
   if (response && response.statusCode === 200) {
-    const films = JSON.parse(body).results;
-    const id = 18;
-    const filmsWithId = films.filter(film => film.episode_id === id);
-    console.log(filmsWithId.length);
-  } else {
-    console.error('Failed to fetch film details:', response && response.statusCode);
-  }
+    const sub = '/people/13/';
+    const str = JSON.stringify(body);
+    const count = str.split(sub).length - 1;
+    console.log(count);  }
 });
-
