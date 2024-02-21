@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-const apiUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
+const apiUrl = process.argv[2];
 
 request(apiUrl, function (error, response, body) {
   if (error) {
@@ -13,8 +13,10 @@ request(apiUrl, function (error, response, body) {
   if (response && response.statusCode === 200) {
     const characterInfo = JSON.parse(body);
     const films = characterInfo.films;
-    console.log(films.length);
+    const idToSearch = 18;
+    const filmsWithId = films.filter(film => film.episode_id === idToSearch);
+    console.log(filmsWithId.length);
   } else {
-    console.error('Failed to fetch character details:', response && response.statusCode);
+    console.error('Failed to fetch film details:', response && response.statusCode);
   }
 });
